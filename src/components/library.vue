@@ -8,7 +8,7 @@
 		  :on-icon-click="handleIconClick">
 		</el-input>
 		<div class="tag-box">
-			<p v-for="item in books" :key="item"><el-tag type="success" hit='hit'><span @click="toBook(item)">{{item}}</span></el-tag></p>			
+			<p v-for="item in books" :key="item"><el-tag type="success" hit='hit'><span @click="toTag(item)">{{item}}</span></el-tag></p>			
 		</div>
 		<h1>搜索历史</h1>
 		<div class="tag-box">
@@ -35,13 +35,16 @@ export default{
 				if(!localStorage[this.input]){
 					localStorage.setItem(this.input,this.input);
 					
-					this.$router.push({path:'/book/'+this.input})
+					this.$router.push({path:'/book_list/'+this.input})
 				}
 
 			}
 		},
 		toBook(item){
-			this.$router.push({path:'/book/'+item})
+			this.$router.push({path:'/book_list/'+item})
+		},
+		toTag(item){
+			this.$router.push({name:'book_tag_list',params:{tag:item}})
 		}
 	}
 }

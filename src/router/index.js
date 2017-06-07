@@ -8,6 +8,8 @@ import cat_list from '@/components/cat_list'
 import library from '@/components/library'
 import book from '@/components/book'
 import celebrity from '@/components/common/celebrity'
+import book_tag_list from '@/components/book_tag_list'
+import bookdetail from '@/components/bookdetail'
 
 
 Vue.use(Router)
@@ -63,9 +65,19 @@ export default new Router({
     	component:cat_list
     },
     {
-    	path:'/book/:name',
-    	name:'book',
+    	path:'/book_list/:name',
+    	name:'book_list',
     	component:book
+    },
+    {
+      path:'/book_tag_list/:tag',
+      name:'book_tag_list',
+      component:book_tag_list
+    },
+    {
+      path:'/book/:id',
+      name:'book',
+      component:bookdetail
     }
   ]
 })

@@ -9,7 +9,7 @@
 							<el-row :gutter="20">
 								<el-col :span="6" :offset="6" class="nav-btn"><span @click="refresh">电影</span></el-col>
 								<el-col :span="6" class="nav-btn" :style="{color:red}"><span @click="library">图书</span></el-col>
-								<el-col :span="6" class="nav-btn" :style="{color:yellow}"><span @click="refresh">广播</span></el-col>
+								<el-col :span="6" class="nav-btn" :style="{color:yellow}"><span @click="refresh">其他</span></el-col>
 							</el-row>
 						</el-col>					
 					</el-row>

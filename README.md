@@ -17,7 +17,7 @@
 
 ![预览gif](img/home.gif) ![预览gif](img/movie.gif) ![预览gif](img/book.gif)
 
-##**运行**
+## **运行**
 ```bash
 #克隆到本地
 git colone git@github.com:Cslove/Vue2.0-douban.git

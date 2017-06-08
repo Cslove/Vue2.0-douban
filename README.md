@@ -32,4 +32,4 @@ npm install
 npm run dev
 
 ```
-####**注意：请在Chrome浏览器手机桌面模式下运行，访问豆瓣api会涉及跨域问题，在chrome浏览器中下载个allow-control-allow-origin插件就可访问豆瓣api**
+**注意：请在Chrome浏览器手机桌面模式下运行，访问豆瓣api会涉及跨域问题，在chrome浏览器中下载个allow-control-allow-origin插件就可访问豆瓣api**

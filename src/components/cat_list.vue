@@ -57,7 +57,7 @@ export default{
 			if(wrap.scrollTop + document.documentElement.clientHeight === wrap.scrollHeight){
 				let start = this.movieData.length;
 				this.loading = true;
-				this.url = 'https://api.douban.com/v2/movie/search?tag='+this.cat_title+'&start='+start;				
+				this.url = 'https://bird.ioliu.cn/v1?url=https://api.douban.com/v2/movie/search?tag='+this.cat_title+'&start='+start;				
 				if(this.flag){
 						let arr = await axios.get(this.url)
 						
@@ -85,7 +85,7 @@ export default{
 		async getSlideData(tg,start=0) {
 		  
 		  let loading=this.$loading({fullscreen:true,text:'cslove为您努力加载ing...'})
-	      let url = 'https://api.douban.com/v2/movie/search?tag='+tg+'&start='+start;
+	      let url = 'https://bird.ioliu.cn/v1?url=https://api.douban.com/v2/movie/search?tag='+tg+'&start='+start;
 	      let res = await axios.get(url);
 	      let data1= res.data.subjects
 	      this.movieData = data1;

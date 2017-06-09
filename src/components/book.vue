@@ -14,6 +14,7 @@
 <script>
 import myHead from './common/header'
 import axios from 'axios'
+import URL from '../utils/url'
 export default{
 	data(){
 		return {
@@ -31,7 +32,7 @@ export default{
 		async getBooks(){
 			let loading=this.$loading({fullscreen:true,text:'cslove为您努力加载ing...'})
 			if(this.book_name){
-				let url = 'https://api.douban.com/v2/book/search?q='+this.book_name;
+				let url = URL.url+'https://api.douban.com/v2/book/search?q='+this.book_name;
 				let res = await axios.get(url)
 				this.books = res.data.books;
 				if(res){loading.close()};

@@ -3,7 +3,7 @@ import axios from 'axios'
 
 
 
-let pre ='https://api.douban.com/v2/';
+let pre ='https://bird.ioliu.cn/v1?url=https://api.douban.com/v2/';
 let slideData = null;
 
 let URL = {

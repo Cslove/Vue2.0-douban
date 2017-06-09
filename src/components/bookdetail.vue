@@ -34,6 +34,7 @@
 </template>
 <script>
 import axios from 'axios'
+import URL from '../utils/url'
 export default{
 	data(){
 		return{
@@ -52,7 +53,7 @@ export default{
 		},
 		async getMovieData(id){
 			let loading=this.$loading({fullscreen:true,text:'cslove为您努力加载ing...'})
-			let url = 'https://api.douban.com/v2/book/'+id;
+			let url = URL.url+'https://api.douban.com/v2/book/'+id;
 			let res = await axios.get(url)
 			this.data = res.data;
 			if(res){loading.close()};

@@ -24,6 +24,7 @@ import comingSoon from './common/movie_coming.vue'
 import usaMovie from './common/usa_movie.vue'
 import catgory from './common/catg.vue'
 import allData from '@/service/getDouBanData'
+import URL from '../utils/url'
 export default {
   name: 'hello',
   data () {
@@ -72,13 +73,13 @@ export default {
       this.usaList = usaData.subjects.slice(0,6);
     },
     async getMovieComing(){
-      let url = 'https://api.douban.com/v2/movie/coming_soon';
+      let url = URL.url+'https://api.douban.com/v2/movie/coming_soon';
       let res = await axios.get(url);
       let data2= res.data.subjects.slice(0,6);
       this.movieComing = data2;
     },
     async getUsaMsg(){
-      let url = 'https://api.douban.com/v2/movie/us_box';
+      let url = URL.url+'https://api.douban.com/v2/movie/us_box';
       let res = await axios.get(url);
       this.usaDate = res.data.date;
       this.usaList = res.data.subjects.slice(0,6);

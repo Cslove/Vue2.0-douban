@@ -16,6 +16,7 @@
 <script>
 import myHead from './common/header.vue'
 import axios from 'axios'
+import URL from '../utils/url'
 export default{
 	data(){
 		return {
@@ -61,7 +62,7 @@ export default{
 				let start = this.movieData.length;
 				this.loading = true;
 				if(this.cat_title){
-					this.url = 'https://api.douban.com/v2/book/search?tag='+this.cat_title+'&start='+start;
+					this.url = URL.url+'https://api.douban.com/v2/book/search?tag='+this.cat_title+'&start='+start;
 					
 				}
 				if(this.flag){
@@ -86,7 +87,7 @@ export default{
 		async getSlideData(start=0) {
 		  
 		  let loading=this.$loading({fullscreen:true,text:'cslove为您努力加载ing...'})
-	      let url = 'https://api.douban.com/v2/book/search?tag='+this.cat_title+'&start='+start;
+	      let url = URL.url+'https://api.douban.com/v2/book/search?tag='+this.cat_title+'&start='+start;
 	      let res = await axios.get(url);
 	      let data1= res.data.books
 	      this.movieData = data1;

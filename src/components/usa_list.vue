@@ -49,7 +49,7 @@ export default{
 		},
 	    async getUsaMsg(){
 	    	let loading=this.$loading({fullscreen:true,text:'cslove为您努力加载ing...'})
-	      let url = 'https://api.douban.com/v2/movie/us_box';
+	      let url = 'https://bird.ioliu.cn/v1?url=https://api.douban.com/v2/movie/us_box';
 	      let res = await axios.get(url);
 	      this.movieData = res.data.subjects;
 	      if(res){loading.close()}

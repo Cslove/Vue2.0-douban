@@ -16,6 +16,7 @@
 </template>
 <script>
 import axios from 'axios'
+import URL from '../../utils/url'
 export default{
 	data(){
 		return {
@@ -44,7 +45,7 @@ export default{
 		async getCelebrity(val){
 				
 				this.loading = true;
-				let url = 'https://api.douban.com/v2/movie/celebrity/'+val;
+				let url = URL.url+'https://api.douban.com/v2/movie/celebrity/'+val;
 				let res = await axios.get(url);
 				
 				this.message = res.data;

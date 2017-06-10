@@ -15,7 +15,7 @@
 - element-ui
 
 
-#### 线上预览地址：[在这里](https://cslove.github.io/vue2.0-db)
+#### 线上预览地址：[在这里](https://cslove.github.io/vue2.0-db)（Chrome手机模式下）
 
 
 ## **预览** 

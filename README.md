@@ -15,7 +15,7 @@
 - element-ui
 
 
-#### 线上预览地址：[在这里](https://cslove.github.io/vue2.0-db)（Chrome手机模式下）
+#### 线上预览地址：[在这里](https://cslove.github.io/vue2.0-db)（Chrome浏览器手机模式下）
 
 
 ## **预览** 
@@ -25,7 +25,7 @@
 ## **运行**
 ```bash
 #克隆到本地
-git colone git@github.com:Cslove/Vue2.0-douban.git
+git clone git@github.com:Cslove/Vue2.0-douban.git
 
 #进入目录
 cd Vue2.0-douban
